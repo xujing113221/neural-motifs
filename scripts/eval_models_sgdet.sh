@@ -16,7 +16,7 @@ elif [ $1 == "1" ]; then
 elif [ $1 == "2" ]; then
     echo "EVALING MOTIFNET"
     python models/eval_rels.py -m sgdet -model motifnet -order leftright -nl_obj 2 -nl_edge 4 -b 6 -clip 5 \
-        -p 100 -hidden_dim 512 -pooling_dim 4096 -lr 1e-3 -ngpu 1 -test -ckpt checkpoints/motifnet-sgdet/vgrel-14.tar -nepoch 50 -cache motifnet_sgdet.pkl -use_bias
+        -p 100 -hidden_dim 512 -pooling_dim 4096 -lr 1e-3 -ngpu 1 -test -ckpt /home/xujing/tmp/checkpoints/vg-24.tar -nepoch 50 -cache motifnet_sgdet.pkl -use_bias
 fi
 
 

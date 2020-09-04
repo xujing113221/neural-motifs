@@ -6,19 +6,19 @@ from argparse import ArgumentParser
 import numpy as np
 
 ROOT_PATH = os.path.dirname(os.path.realpath(__file__))
-DATA_PATH = os.path.join(ROOT_PATH, 'data')
+DATA_PATH = '/home/xujing/tmp/data'
 
 def path(fn):
     return os.path.join(DATA_PATH, fn)
 
 def stanford_path(fn):
-    return os.path.join(DATA_PATH, 'stanford_filtered', fn)
+    return os.path.join('/data/scene_understanding/Visual_Genome/stanford_filtered', fn)
 
 # =============================================================================
 # Update these with where your data is stored ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-VG_IMAGES = '/home/rowan/datasets2/VG_100K_2/VG_100K'
-RCNN_CHECKPOINT_FN = path('faster_rcnn_500k.h5')
+VG_IMAGES = '/data/scene_understanding/Visual_Genome/VG_100K'
+RCNN_CHECKPOINT_FN = '~/tmp/checkpoints/faster_rcnn_500k.h5'
 
 IM_DATA_FN = stanford_path('image_data.json')
 VG_SGG_FN = stanford_path('VG-SGG.h5')

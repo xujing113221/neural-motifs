@@ -257,6 +257,11 @@ def load_image_filenames(image_file, image_dir=VG_IMAGES):
         filename = os.path.join(image_dir, basename)
         if os.path.exists(filename):
             fns.append(filename)
+
+        filename = os.path.join(image_dir+'_2', basename)
+        if os.path.exists(filename):
+            fns.append(filename)
+
     assert len(fns) == 108073
     return fns
 
