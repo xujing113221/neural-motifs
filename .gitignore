@@ -106,3 +106,4 @@ data/stanford_filtered/VG-SGG.h5
 data/stanford_filtered/VG-SGG-dicts.json
 checkpoints/vgrel-motifnet-sgdet.tar
 mynote.md
+/datalist.md
