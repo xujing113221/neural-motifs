@@ -11,22 +11,21 @@ from torch.nn import functional as F
 from torch.nn.utils.rnn import PackedSequence
 from lib.resnet import resnet_l4
 from config import BATCHNORM_MOMENTUM
-from lib.fpn.nms.functions.nms import apply_nms
-
+# from lib.fpn.nms.functions.nms import apply_nms
 # from lib.decoder_rnn import DecoderRNN, lstm_factory, LockedDropout
-from lib.lstm.decoder_rnn import DecoderRNN
-from lib.lstm.highway_lstm_cuda.alternating_highway_lstm import AlternatingHighwayLSTM
+# from lib.lstm.decoder_rnn import DecoderRNN
+# from lib.lstm.highway_lstm_cuda.alternating_highway_lstm import AlternatingHighwayLSTM
 from lib.fpn.box_utils import bbox_overlaps, center_size
-from lib.get_union_boxes import UnionBoxesAndFeats
 from lib.fpn.proposal_assignments.rel_assignments import rel_assignments
-from lib.object_detector import ObjectDetector, gather_res, load_vgg
 from lib.pytorch_misc import transpose_packed_sequence_inds, to_onehot, arange, enumerate_by_image, diagonal_inds, Flattener
 from lib.sparse_targets import FrequencyBias
 from lib.surgery import filter_dets
 from lib.word_vectors import obj_edge_vectors
-from lib.fpn.roi_align.functions.roi_align import RoIAlignFunction
 import math
 
+from lib.get_union_boxes import UnionBoxesAndFeats
+from lib.object_detector import ObjectDetector, gather_res, load_vgg
+from lib.fpn.roi_align.functions.roi_align import RoIAlignFunction
 
 def _sort_by_score(im_inds, scores):
     """

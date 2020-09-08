@@ -24,7 +24,6 @@ IM_DATA_FN = stanford_path('image_data.json')
 VG_SGG_FN = stanford_path('VG-SGG.h5')
 VG_SGG_DICT_FN = stanford_path('VG-SGG-dicts.json')
 PROPOSAL_FN = stanford_path('proposals.h5')
-
 COCO_PATH = '/home/rowan/datasets/mscoco'
 # =============================================================================
 # =============================================================================

@@ -6,7 +6,7 @@ export CUDA_VISIBLE_DEVICES=$1
 if [ $1 == "0" ]; then
     echo "TRAINING THE BASELINE"
     python models/train_rels.py -m sgcls -model motifnet -nl_obj 0 -nl_edge 0 -b 6 \
-    -clip 5 -p 100 -pooling_dim 4096 -lr 1e-3 -ngpu 1 -ckpt checkpoints/vgdet/vg-24.tar -save_dir checkpoints/baseline2 \
+    -clip 5 -p 100 -pooling_dim 4096 -lr 1e-3 -ngpu 1 -ckpt /home/xujing/tmp/checkpoints/vg-24.tar -save_dir checkpoints/baseline2 \
     -nepoch 50 -use_bias
 elif [ $1 == "1" ]; then
     echo "TRAINING MESSAGE PASSING"
