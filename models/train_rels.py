@@ -25,9 +25,12 @@ elif conf.model == 'stanford':
 else:
     raise ValueError()
 
-train, val, _ = VG.splits(num_val_im=conf.val_size, filter_duplicate_rels=True,
+
+train, val, test = VG.splits(num_val_im=conf.val_size, filter_duplicate_rels=True,
                           use_proposals=conf.use_proposals,
                           filter_non_overlap=conf.mode == 'sgdet')
+if conf.test:
+    val = test
 train_loader, val_loader = VGDataLoader.splits(train, val, mode='rel',
                                                batch_size=conf.batch_size,
                                                num_workers=conf.num_workers,

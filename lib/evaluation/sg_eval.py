@@ -35,10 +35,19 @@ class BasicSceneGraphEvaluator:
         np.save(fn, self.result_dict)
 
     def print_stats(self):
-        print('======================' + self.mode + '============================')
-        for k, v in self.result_dict[self.mode + '_recall'].items():
-            print('R@%i: %f' % (k, np.mean(v)))
+        with open("/home/xujing/Dokumente/neural-motifs/train_log.txt", 'a') as f:
+            print('======================' + self.mode + '============================')
+            f.write('======================' + self.mode + '============================\n')
+            for k, v in self.result_dict[self.mode + '_recall'].items():
+                print('R@%i: %f' % (k, np.mean(v)))
+                f.write('R@%i: %f' % (k, np.mean(v)))
+                f.write('\n')
+            f.write('\n\n')
 
+    # def print_stats(self):
+    #     print('======================' + self.mode + '============================')
+    #     for k, v in self.result_dict[self.mode + '_recall'].items():
+    #         print('R@%i: %f' % (k, np.mean(v)))
 
 def evaluate_from_dict(gt_entry, pred_entry, mode, result_dict, multiple_preds=False,
                        viz_dict=None, **kwargs):

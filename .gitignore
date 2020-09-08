@@ -103,10 +103,10 @@ ENV/
 .mypy_cache/
 data/.DS_Store
 data/stanford_filtered/image_data.json
-checkpoints/vg-faster-rcnn.tar
-checkpoints/vgrel-motifnet-sgcls.tar
+checkpoints/
 data/stanford_filtered/VG-SGG.h5
 data/stanford_filtered/VG-SGG-dicts.json
 checkpoints/vgrel-motifnet-sgdet.tar
 mynote.md
 /datalist.md
+train_log.txt
