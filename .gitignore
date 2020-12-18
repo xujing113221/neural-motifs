@@ -110,3 +110,5 @@ checkpoints/vgrel-motifnet-sgdet.tar
 mynote.md
 /datalist.md
 train_log.txt
+baseline_predcls
+*.o
